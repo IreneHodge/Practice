@@ -5,13 +5,15 @@ for(var i = 0; i < numOfDrumButtons; i++){
     document.querySelectorAll(".drum")[i].addEventListener("click", function(){
         var buttonInnerHTML = this.innerHTML;
         drumBeat(buttonInnerHTML);
+        buttonAnimation(buttonInnerHTML);
     })
 }
 
 
 
 addEventListener("keydown", function(event) {
-drumBeat(event.key);
+    drumBeat(event.key);
+    buttonAnimation(event.key);
 })
 
 
@@ -59,5 +61,16 @@ var drumBeat = function(key) {
              console.log(key);
        }
        
+    }
+
+    function buttonAnimation(key) {
+        var activeButton = document.querySelector("." + key);
+        
+        activeButton.classList.add('pressed');
+        
+        setTimeout( () => {
+            activeButton.classList.remove('pressed');
+        }, 100)
+
     }
     
