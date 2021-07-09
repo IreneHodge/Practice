@@ -8,7 +8,7 @@ var level = 0;
 $(document).on("keypress", function() {
    if(!gameStart){
        $("#level-title").text("Level " + level);
-       nextSequence;
+       nextSequence();
        started = true;
    }
   })
