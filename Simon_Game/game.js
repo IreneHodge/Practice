@@ -2,6 +2,16 @@ var buttonColors = ["red", "blue", "green", "yellow"];
 
 var gamePattern = [];
 var userClickedPattern = [];
+var gameStart = false;
+var level = 0;
+
+$(document).on("keypress", function() {
+   if(!gameStart){
+       $("#level-title").text("Level " + level);
+       nextSequence;
+       started = true;
+   }
+  })
 
 $(".btn").click(function() {
 
@@ -11,10 +21,15 @@ $(".btn").click(function() {
     playSound(userChosenColor);
     animatePress(userChosenColor);
   })
-  
-  
+
+
+
 
 function nextSequence() {
+
+    level++;
+
+    $("#level-title").text("Level " + level);
 
     var randomNumber = Math.floor((Math.random() * 4));
     var randomChosenColor = buttonColors[randomNumber];
