@@ -45,7 +45,7 @@
 
 # Simon_Game
 
-![](simon.gif)
+![Simon Game Gif](Simon_Game/simon.gif)
 
 >The Simon Game is a virtual version of the popular game Simon created using HTML, CSS and Javascript. 
 
