@@ -12,8 +12,9 @@ app.get("/contact", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.send("I'm Irene! I am a fullstack software engineer. :)");
+  res.send("I'm Irene.");
 });
+
 app.listen(port, () => {
   console.log("You are connected");
 });
